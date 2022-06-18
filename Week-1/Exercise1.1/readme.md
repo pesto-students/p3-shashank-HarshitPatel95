@@ -15,7 +15,7 @@ URL Example : https://www.pesto.tech/become-a-developer
 
 > When a user enter an URL in web browser’s address bar, the browser looks up the IP address for the domain name using DNS (Domain Name System). Browser initiates a connection with the server using Transfer Control Protocol. Browser sends an HTTP request to the web server. Server handles request and sends back response to the browser. Browser render the HTML and other resource to the users. Once page loaded, browser sends further requests which is initiate by users.
 
-![title](img/ss1.png)
+![how does the browser fetch the desired result](img/ss1.png)
 
 ## High Level Components of a browser
 
@@ -27,13 +27,13 @@ URL Example : https://www.pesto.tech/become-a-developer
 6. JavaScript interpreter
 7. Data storage
 
-![title](img/ss2.png)
+![High Level Components of a browser](img/ss2.png)
 
 ## The rendering engine:
 
 After request a particular resource from user, the render engine start fetching content of the requested resource. Render engine start receiving the content of that specific document in chunks from networking layer. After receiving content flow the rendering begins as mention below,
 
-![title](img/ss3.png)
+![The rendering engine](img/ss3.png)
 
 ## Parsing
 
