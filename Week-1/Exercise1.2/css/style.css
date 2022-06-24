@@ -10,6 +10,10 @@ html {
   --white: #ffffff;
   --black: #000000;
   --menucolor: #e3dfdf;
+  --headcolor: #494646;
+  --footcolor: #5981bd;
+  --linkcolor: #0000ff;
+  --evenrow: #ededed;
 }
 
 body {
@@ -49,7 +53,7 @@ body {
   flex: 0 0 180px;
   flex-direction: row;
   padding: 30px;
-  background-color: #494646;
+  background-color: var(--headcolor);
   color: var(--white);
 }
 
@@ -116,18 +120,18 @@ body {
   border: 1px solid var(--black);
   font-size: 0.8em;
   padding: 2px;
-  color: blue;
+  color: var(--linkcolor);
 }
 
 .main-content .content-section .list-content ul li:nth-child(2n) {
-  background-color: #ededed;
+  background-color: var(--evenrow);
 }
 
 .footer-content {
   display: flex;
   flex: 0 0 120px;
   color: var(--white);
-  background-color: #5981bd;
+  background-color: var(--footcolor);
   padding: 10px;
 }
 
