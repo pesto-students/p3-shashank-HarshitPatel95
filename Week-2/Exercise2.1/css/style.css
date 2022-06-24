@@ -1,8 +1,10 @@
 :root {
   --fontcolor: #4d3232;
-  --appcolor: #f1f1f1;
+  --greybackground: #f1f1f1;
   --footercolor: #6495ed;
   --whitefont: #ffffff;
+  --whitebackground: #ffffff;
+  --linkcolor: #1358d0;
 }
 
 * {
@@ -18,12 +20,11 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: var(--appcolor);
 }
 
 .main-content {
   display: block;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
 }
 
 .main-content .header-container {
@@ -31,6 +32,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 50px;
+  background-color: var(--greybackground);
 }
 
 .main-content .header-container .header-text {
@@ -68,6 +70,40 @@ body {
   }
   .main-content .header-container .header-desc * {
     margin: 10px;
+  }
+}
+
+.main-content .article-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 50px;
+  background-color: var(--whitebackground);
+}
+
+.main-content .article-container article {
+  width: 30%;
+  padding: 10px;
+}
+
+.main-content .article-container article p {
+  text-align: justify;
+  font-size: 0.9em;
+}
+
+.main-content .article-container article a {
+  color: var(--linkcolor);
+}
+
+@media (max-width: 800px) {
+  .main-content .article-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-content .article-container article {
+    width: auto;
+    padding: 10px;
   }
 }
 
