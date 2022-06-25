@@ -1,0 +1,68 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.main-content {
+  margin-top: 100px;
+}
+
+.main-content .main {
+  height: 200px;
+  width: 200px;
+  margin: auto;
+  position: relative;
+}
+
+.main-content .main .content-msg {
+  position: absolute;
+  width: 200px;
+  font-size: 2em;
+  text-align: center;
+  top: 50%;
+}
+
+.main-content .main .top-left {
+  background: red;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.main-content .main .top-right {
+  background: yellow;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0px;
+  left: 100px;
+}
+
+.main-content .main .bottom-left {
+  background: blue;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 0px;
+  top: 100px;
+}
+
+.main-content .main .bottom-right {
+  background: green;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+}
