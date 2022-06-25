@@ -24,45 +24,81 @@ body {
   width: 200px;
   font-size: 2em;
   text-align: center;
-  top: 50%;
+  margin-top: 124px;
 }
 
 .main-content .main .top-left {
   background: red;
   display: inline-block;
   width: 100px;
-  height: 100px;
+  height: 140px;
   position: absolute;
   top: 0px;
   left: 0px;
+  transition: all 1s ease-out;
+}
+
+.main-content .main:hover .top-left {
+  transform: translateX(-100px) rotate(90deg);
+  width: 140px;
+  height: 100px;
+  top: 20px;
+  left: -20px;
 }
 
 .main-content .main .top-right {
   background: yellow;
   display: inline-block;
   width: 100px;
-  height: 100px;
+  height: 140px;
   position: absolute;
   top: 0px;
   left: 100px;
+  transition: all 1s ease-out;
+}
+
+.main-content .main:hover .top-right {
+  transform: translateX(100px) rotate(-90deg);
+  width: 140px;
+  height: 100px;
+  top: 20px;
+  left: 80px;
 }
 
 .main-content .main .bottom-left {
   background: blue;
   display: inline-block;
   width: 100px;
-  height: 100px;
+  height: 140px;
   position: absolute;
   left: 0px;
-  top: 100px;
+  top: 140px;
+  transition: all 1s ease-out;
+}
+
+.main-content .main:hover .bottom-left {
+  transform: translateX(-100px) rotate(-90deg);
+  width: 140px;
+  height: 100px;
+  top: 160px;
+  left: -20px;
 }
 
 .main-content .main .bottom-right {
   background: green;
   display: inline-block;
   width: 100px;
-  height: 100px;
+  height: 140px;
   position: absolute;
   left: 100px;
-  top: 100px;
+  top: 140px;
+  transition: all 1s ease-out;
+}
+
+.main-content .main:hover > .bottom-right {
+  transform: translateX(100px) rotate(90deg);
+  width: 140px;
+  height: 100px;
+  top: 160px;
+  left: 80px;
 }
