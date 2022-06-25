@@ -7,6 +7,7 @@
   --linkcolor: #1358d0;
   --linkhovercolor: #ff0000;
   --headercolor: #003c68;
+  --formcolor: #b1c4c5;
 }
 
 * {
@@ -17,6 +18,18 @@
 h1 {
   color: var(--headercolor);
   text-transform: uppercase;
+}
+
+h1::before {
+  content: "";
+  background-image: url(../img/dots.svg);
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: inline-block;
+  left: 25px;
+  top: -5px;
 }
 
 html {
@@ -151,6 +164,8 @@ body {
   align-items: center;
   width: 100%;
   padding: 20px;
+  background-color: var(--formcolor);
+  border-radius: 20px;
 }
 
 .main-content .form-container form label {
@@ -170,9 +185,10 @@ body {
 .main-content .form-container form label input[type="tel"],
 .main-content .form-container form label select {
   padding: 5px;
+  margin-top: 5px;
   width: 80%;
   border-radius: 5px;
-  border: 1px solid var(--fontcolor);
+  border: none;
 }
 
 .main-content .form-container form label a {
@@ -181,6 +197,39 @@ body {
 
 .main-content .form-container form label a:hover {
   color: var(--linkhovercolor);
+}
+
+.main-content .form-container form .form-button {
+  background-color: #374151;
+  border-radius: 0.75rem;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+.main-content .form-container form .form-button:hover {
+  background-color: #009999;
+  color: #000000;
+}
+
+@media (max-width: 800px) {
+  .main-content .form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-content .form-container form {
+    width: 88%;
+  }
+  .main-content .form-container form label {
+    width: 250px;
+  }
+  .main-content .form-container form label input[type="text"],
+  .main-content .form-container form label input[type="email"],
+  .main-content .form-container form label input[type="tel"],
+  .main-content .form-container form label select {
+    width: 100%;
+  }
 }
 
 .footer-container {
