@@ -8,6 +8,8 @@
   --linkhovercolor: #ff0000;
   --headercolor: #003c68;
   --formcolor: #b1c4c5;
+  --buttoncolor: #374151;
+  --buttonhover: #009999;
 }
 
 * {
@@ -200,17 +202,17 @@ body {
 }
 
 .main-content .form-container form .form-button {
-  background-color: #374151;
+  background-color: var(--buttoncolor);
   border-radius: 0.75rem;
-  color: #ffffff;
+  color: var(--whitefont);
   cursor: pointer;
   font-weight: 600;
   line-height: 1.5rem;
 }
 
 .main-content .form-container form .form-button:hover {
-  background-color: #009999;
-  color: #000000;
+  background-color: var(--buttonhover);
+  color: var(--fontcolor);
 }
 
 @media (max-width: 800px) {
