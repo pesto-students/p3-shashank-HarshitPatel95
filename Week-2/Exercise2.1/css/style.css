@@ -5,11 +5,18 @@
   --whitefont: #ffffff;
   --whitebackground: #ffffff;
   --linkcolor: #1358d0;
+  --linkhovercolor: #ff0000;
+  --headercolor: #003c68;
 }
 
 * {
   font-family: Lato, sans-serif;
   color: var(--fontcolor);
+}
+
+h1 {
+  color: var(--headercolor);
+  text-transform: uppercase;
 }
 
 html {
@@ -78,13 +85,21 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: space-evenly;
   padding: 50px;
   background-color: var(--whitebackground);
 }
 
+.main-content .article-container h1 {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.6em;
+  text-align: center;
+}
+
 .main-content .article-container article {
   width: 30%;
-  padding: 10px;
+  padding: 20px;
 }
 
 .main-content .article-container article p {
@@ -94,6 +109,11 @@ body {
 
 .main-content .article-container article a {
   color: var(--linkcolor);
+  font-size: 0.8em;
+}
+
+.main-content .article-container article a:hover {
+  color: var(--linkhovercolor);
 }
 
 @media (max-width: 800px) {
@@ -105,6 +125,62 @@ body {
     width: auto;
     padding: 10px;
   }
+}
+
+.main-content .form-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 50px;
+  background-color: var(--greybackground);
+}
+
+.main-content .form-container h1 {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.main-content .form-container form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.main-content .form-container form label {
+  padding: 10px;
+  width: 620px;
+  font-size: 0.9em;
+}
+
+.main-content .form-container form button {
+  padding: 10px;
+  width: 620px;
+  margin-top: 20px;
+}
+
+.main-content .form-container form label input[type="text"],
+.main-content .form-container form label input[type="email"],
+.main-content .form-container form label input[type="tel"],
+.main-content .form-container form label select {
+  padding: 5px;
+  width: 80%;
+  border-radius: 5px;
+  border: 1px solid var(--fontcolor);
+}
+
+.main-content .form-container form label a {
+  color: var(--linkcolor);
+}
+
+.main-content .form-container form label a:hover {
+  color: var(--linkhovercolor);
 }
 
 .footer-container {
