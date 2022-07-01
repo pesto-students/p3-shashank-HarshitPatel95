@@ -1,8 +1,8 @@
 :root {
-  --redcolor: #ff0000;
-  --yellowcolor: #ffff00;
-  --bluecolor: #0000ff;
-  --greencolor: #008000;
+  --red-color: #ff0000;
+  --yellow-color: #ffff00;
+  --blue-color: #0000ff;
+  --green-color: #008000;
 }
 
 html {
@@ -35,7 +35,7 @@ body {
 }
 
 .main-content .main .top-left {
-  background-color: var(--redcolor);
+  background-color: var(--red-color);
   display: inline-block;
   width: 100px;
   height: 140px;
@@ -54,7 +54,7 @@ body {
 }
 
 .main-content .main .top-right {
-  background-color: var(--yellowcolor);
+  background-color: var(--yellow-color);
   display: inline-block;
   width: 100px;
   height: 140px;
@@ -73,7 +73,7 @@ body {
 }
 
 .main-content .main .bottom-left {
-  background-color: var(--bluecolor);
+  background-color: var(--blue-color);
   display: inline-block;
   width: 100px;
   height: 140px;
@@ -92,7 +92,7 @@ body {
 }
 
 .main-content .main .bottom-right {
-  background-color: var(--greencolor);
+  background-color: var(--green-color);
   display: inline-block;
   width: 100px;
   height: 140px;
