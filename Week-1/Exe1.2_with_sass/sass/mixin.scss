@@ -1,0 +1,23 @@
+@mixin flex-direction-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-direction-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin div-inline-block($width) {
+  display: inline-block;
+  width: $width;
+}
+
+@mixin div-block-height($height) {
+  display: block;
+  height: $height;
+}
+
+@mixin flex-prop($grow, $shrink, $basis) {
+  flex: $grow $shrink $basis;
+}

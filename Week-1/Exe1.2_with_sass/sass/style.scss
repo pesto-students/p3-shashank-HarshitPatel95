@@ -1,0 +1,145 @@
+@import "variables", "mixin";
+
+* {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  @include flex-direction-column;
+  height: 100vh;
+}
+
+.main-body {
+  .main-content {
+    @include flex-direction-row;
+    @include flex-prop(1, 1, auto);
+
+    .nav-bar {
+      @include flex-direction-column;
+      @include flex-prop(0, 0, 40px);
+
+      justify-content: space-around;
+      align-items: center;
+      background-color: $color-chinese-white;
+
+      i {
+        font-size: $font-medium;
+      }
+    }
+
+    .content-section {
+      @include flex-direction-column;
+      @include flex-prop(1, 1, auto);
+
+      .header-content {
+        @include flex-direction-row;
+        @include flex-prop(0, 0, 180px);
+        padding: 30px;
+        background-color: $color-outer-space;
+        color: $color-white;
+
+        .img-div {
+          @include div-inline-block(15%);
+        }
+
+        .info-div {
+          @include div-inline-block(85%);
+
+          .info-title-div {
+            @include div-block-height(75%);
+
+            h1 {
+              margin: 0px 0px 10px 0px;
+            }
+
+            p {
+              margin: 5px;
+              font-size: $font-extra-small;
+            }
+          }
+
+          .info-menu-div {
+            @include div-block-height(20%);
+            line-height: 50px;
+
+            i {
+              font-size: $font-small;
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+
+      .list-content {
+        @include flex-direction-column;
+        @include flex-prop(1, 1, auto);
+
+        ul {
+          @include flex-direction-column;
+          @include flex-prop(1, 0, auto);
+          padding: 5px;
+
+          li {
+            @include flex-direction-row;
+            padding: 15px 25px;
+
+            p {
+              @include flex-prop(0, 0, 25%);
+
+              .sync-link {
+                border: 1px solid $color-black;
+                font-size: $font-extra-small;
+                padding: 2px;
+                color: $color-blue;
+              }
+            }
+
+            &:nth-child(2n) {
+              background-color: $color-bright-gray;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-content {
+    @include flex-direction-row;
+    @include flex-prop(0, 0, 120px);
+    color: $color-white;
+    background-color: $color-silver-lake-blue;
+    padding: 10px;
+
+    .footer-img-div {
+      @include flex-direction-row;
+      @include flex-prop(0, 0, 140px);
+    }
+    .footer-info-div {
+      @include flex-direction-column;
+      @include flex-prop(0, 0, 240px);
+
+      p {
+        margin: 10px 0px;
+      }
+    }
+
+    .footer-menu-div {
+      @include flex-direction-row;
+      flex-basis: 50%;
+      justify-content: space-around;
+      align-items: center;
+      margin-left: auto;
+
+      i {
+        font-size: $font-medium;
+      }
+    }
+  }
+}
