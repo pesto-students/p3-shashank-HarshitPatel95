@@ -1,20 +1,20 @@
 :root {
-  --font-color: #4d3232;
+  --brown-coffee-color: #4d3232;
   --grey-color: #f1f1f1;
-  --footer-color: #6495ed;
+  --cornflower-blue-color: #6495ed;
   --white-color: #ffffff;
-  --link-color: #1358d0;
-  --link-hover-color: #ff0000;
-  --header-color: #003c68;
-  --form-color: #b1c4c5;
-  --button-color: #374151;
-  --button-hover-color: #009999;
+  --blue-color: #1358d0;
+  --red-color: #ff0000;
+  --ateneo-blue-color: #003c68;
+  --pastel-blue-color: #b1c4c5;
+  --charcoal-color: #374151;
+  --viridian-green-color: #009999;
   --font-family: Lato, sans-serif;
 }
 
 * {
   font-family: var(--font-family);
-  color: var(--font-color);
+  color: var(--brown-coffee-color);
 }
 
 html {
@@ -28,7 +28,7 @@ body {
 }
 
 h1 {
-  color: var(--header-color);
+  color: var(--ateneo-blue-color);
   text-transform: uppercase;
 }
 
@@ -111,12 +111,12 @@ h1::before {
 }
 
 .main-content .article-container article a {
-  color: var(--link-color);
+  color: var(--blue-color);
   font-size: 0.8em;
 }
 
 .main-content .article-container article a:hover {
-  color: var(--link-hover-color);
+  color: var(--red-color);
 }
 
 .main-content .form-container {
@@ -143,7 +143,7 @@ h1::before {
   align-items: center;
   width: 100%;
   padding: 20px;
-  background-color: var(--form-color);
+  background-color: var(--pastel-blue-color);
   border-radius: 20px;
 }
 
@@ -171,15 +171,15 @@ h1::before {
 }
 
 .main-content .form-container form label a {
-  color: var(--link-color);
+  color: var(--blue-color);
 }
 
 .main-content .form-container form label a:hover {
-  color: var(--link-hover-color);
+  color: var(--red-color);
 }
 
 .main-content .form-container form .form-button {
-  background-color: var(--button-color);
+  background-color: var(--charcoal-color);
   border-radius: 0.75rem;
   color: var(--white-color);
   cursor: pointer;
@@ -189,12 +189,12 @@ h1::before {
 }
 
 .main-content .form-container form .form-button:hover {
-  background-color: var(--button-hover-color);
-  color: var(--font-color);
+  background-color: var(--viridian-green-color);
+  color: var(--brown-coffee-color);
 }
 
 .footer-container {
-  background-color: var(--footer-color);
+  background-color: var(--cornflower-blue-color);
   position: fixed;
   left: 0;
   bottom: 0;
