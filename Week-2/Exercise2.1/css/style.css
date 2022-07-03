@@ -1,0 +1,269 @@
+:root {
+  --brown-coffee-color: #4d3232;
+  --grey-color: #f1f1f1;
+  --cornflower-blue-color: #6495ed;
+  --white-color: #ffffff;
+  --blue-color: #1358d0;
+  --red-color: #ff0000;
+  --ateneo-blue-color: #003c68;
+  --pastel-blue-color: #b1c4c5;
+  --charcoal-color: #374151;
+  --viridian-green-color: #009999;
+  --font-family: Lato, sans-serif;
+}
+
+* {
+  font-family: var(--font-family);
+  color: var(--brown-coffee-color);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+h1 {
+  color: var(--ateneo-blue-color);
+  text-transform: uppercase;
+}
+
+h1::before {
+  content: "";
+  background-image: url(../img/header-before-image.svg);
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: inline-block;
+  left: 25px;
+  top: -5px;
+}
+
+.main-content {
+  display: block;
+  padding-bottom: 60px;
+}
+
+.main-content .header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  background-color: var(--grey-color);
+}
+
+.main-content .header-container .header-text {
+  font-size: 2em;
+  text-align: center;
+}
+
+.main-content .header-container .header-desc {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-content .header-container .header-desc div {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.main-content .header-container .header-desc * {
+  margin: 30px;
+  text-align: justify;
+}
+
+.main-content .header-container .header-desc img {
+  width: 80%;
+  align-self: center;
+}
+
+.main-content .article-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 50px;
+  background-color: var(--white-color);
+}
+
+.main-content .article-container h1 {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.main-content .article-container article {
+  width: 30%;
+  padding: 20px;
+}
+
+.main-content .article-container article p {
+  text-align: justify;
+  font-size: 0.9em;
+}
+
+.main-content .article-container article a {
+  color: var(--blue-color);
+  font-size: 0.8em;
+}
+
+.main-content .article-container article a:hover {
+  color: var(--red-color);
+}
+
+.main-content .form-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 50px;
+  background-color: var(--grey-color);
+}
+
+.main-content .form-container h1 {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.main-content .form-container form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--pastel-blue-color);
+  border-radius: 20px;
+}
+
+.main-content .form-container form label {
+  padding: 10px;
+  width: 620px;
+  font-size: 0.9em;
+}
+
+.main-content .form-container form button {
+  padding: 10px;
+  width: 620px;
+  margin-top: 20px;
+}
+
+.main-content .form-container form label input[type="text"],
+.main-content .form-container form label input[type="email"],
+.main-content .form-container form label input[type="tel"],
+.main-content .form-container form label select {
+  padding: 5px;
+  margin-top: 5px;
+  width: 80%;
+  border-radius: 5px;
+  border: none;
+}
+
+.main-content .form-container form label a {
+  color: var(--blue-color);
+}
+
+.main-content .form-container form label a:hover {
+  color: var(--red-color);
+}
+
+.main-content .form-container form .form-button {
+  background-color: var(--charcoal-color);
+  border-radius: 0.75rem;
+  color: var(--white-color);
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 1.5rem;
+  width: 250px;
+}
+
+.main-content .form-container form .form-button:hover {
+  background-color: var(--viridian-green-color);
+  color: var(--brown-coffee-color);
+}
+
+.footer-container {
+  background-color: var(--cornflower-blue-color);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container div {
+  text-align: center;
+  font-style: italic;
+  padding: 20px;
+  color: var(--white-color);
+}
+
+@media (max-width: 800px) {
+  .main-content .article-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-content .article-container article {
+    width: auto;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-content .header-container .header-desc {
+    flex-direction: column;
+  }
+  .main-content .header-container .header-desc div {
+    width: auto;
+  }
+  .main-content .header-container .header-desc * {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .main-content .form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-content .form-container form {
+    width: 88%;
+  }
+  .main-content .form-container form label {
+    width: 250px;
+  }
+  .main-content .form-container form label input[type="text"],
+  .main-content .form-container form label input[type="email"],
+  .main-content .form-container form label input[type="tel"],
+  .main-content .form-container form label select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .main-content .header-container .header-desc img {
+    background-size: box;
+    width: 300px;
+  }
+}
+
+@media (max-width: 450px) {
+  .main-content .header-container .header-text,
+  .main-content .article-container h1,
+  .main-content .form-container h1 {
+    font-size: 1.2em;
+  }
+  h1::before {
+    display: none;
+  }
+}

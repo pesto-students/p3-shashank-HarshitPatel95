@@ -1,0 +1,111 @@
+:root {
+  --red-color: #ff0000;
+  --yellow-color: #ffff00;
+  --blue-color: #0000ff;
+  --green-color: #008000;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.main-content {
+  margin-top: 100px;
+}
+
+.main-content .main {
+  height: 200px;
+  width: 200px;
+  margin: auto;
+  position: relative;
+}
+
+.main-content .main .content-msg {
+  position: absolute;
+  width: 200px;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 124px;
+}
+
+.main-content .main .top-left {
+  background-color: var(--red-color);
+  display: inline-block;
+  width: 100px;
+  height: 140px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: all 1s ease-out;
+}
+
+.main-content .main:hover .top-left {
+  transform: translateX(-100px) rotate(90deg);
+  width: 140px;
+  height: 100px;
+  top: 20px;
+  left: -20px;
+}
+
+.main-content .main .top-right {
+  background-color: var(--yellow-color);
+  display: inline-block;
+  width: 100px;
+  height: 140px;
+  position: absolute;
+  top: 0px;
+  left: 100px;
+  transition: all 1s ease-out;
+}
+
+.main-content .main:hover .top-right {
+  transform: translateX(100px) rotate(-90deg);
+  width: 140px;
+  height: 100px;
+  top: 20px;
+  left: 80px;
+}
+
+.main-content .main .bottom-left {
+  background-color: var(--blue-color);
+  display: inline-block;
+  width: 100px;
+  height: 140px;
+  position: absolute;
+  left: 0px;
+  top: 140px;
+  transition: all 1s ease-out;
+}
+
+.main-content .main:hover .bottom-left {
+  transform: translateX(-100px) rotate(-90deg);
+  width: 140px;
+  height: 100px;
+  top: 160px;
+  left: -20px;
+}
+
+.main-content .main .bottom-right {
+  background-color: var(--green-color);
+  display: inline-block;
+  width: 100px;
+  height: 140px;
+  position: absolute;
+  left: 100px;
+  top: 140px;
+  transition: all 1s ease-out;
+}
+
+.main-content .main:hover > .bottom-right {
+  transform: translateX(100px) rotate(90deg);
+  width: 140px;
+  height: 100px;
+  top: 160px;
+  left: 80px;
+}
