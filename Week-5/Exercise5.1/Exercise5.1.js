@@ -1,24 +1,39 @@
 function* moviePartGenerator() {
-  try {
-    yield firstHalf();
-    yield interval();
-    yield SecondHalf();
-  } catch (e) {
-    console.log(e.message);
-  }
+  yield firstHalf()
+    .then((res) => console.log)
+    .catch((e) => console.log(e.message));
+  yield interval()
+    .then((res) => console.log)
+    .catch((e) => console.log(e.message));
+  yield SecondHalf()
+    .then((res) => console.log)
+    .catch((e) => console.log(e.message));
+  return { done: true };
 }
 
-function firstHalf() {
-  return console.log("Enjoy opening sequence...");
-}
+const firstHalf = async () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(console.log("Enjoy opening sequence..."));
+    }, 1000);
+  });
+};
 
-function interval() {
-  return console.log("Enjoy your popcorn...");
-}
+const interval = async () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(console.log("Enjoy your popcorn..."));
+    }, 1000);
+  });
+};
 
-function SecondHalf() {
-  return console.log("Enjoy climax...");
-}
+const SecondHalf = async () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(console.log("Enjoy climax..."));
+    }, 1000);
+  });
+};
 
 console.log("\n***** Generator *****\n");
 const part = moviePartGenerator();
