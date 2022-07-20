@@ -5,7 +5,7 @@ function* moviePartGenerator() {
   yield interval()
     .then((res) => console.log)
     .catch((e) => console.log(e.message));
-  yield SecondHalf()
+  yield secondHalf()
     .then((res) => console.log)
     .catch((e) => console.log(e.message));
   return { done: true };
@@ -27,7 +27,7 @@ const interval = async () => {
   });
 };
 
-const SecondHalf = async () => {
+const secondHalf = async () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(console.log("Enjoy climax..."));
@@ -45,7 +45,7 @@ async function moviePartAsynAwait() {
   try {
     await firstHalf();
     await interval();
-    await SecondHalf();
+    await secondHalf();
   } catch (e) {
     console.log(e.message);
   }
