@@ -1,4 +1,4 @@
-const maxsumcontiguous = (arr) => {
+const besttimetobuyll = (arr) => {
   if (!Array.isArray(arr)) {
     throw "Invalid input";
   }
@@ -23,7 +23,7 @@ const maxsumcontiguous = (arr) => {
 
 try {
   let input1 = [7, 1, 5, 3, 6, 4];
-  let output1 = maxsumcontiguous(input1);
+  let output1 = besttimetobuyll(input1);
   console.log(output1);
 } catch (e) {
   console.error(e);
