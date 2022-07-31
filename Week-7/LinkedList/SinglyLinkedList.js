@@ -31,7 +31,6 @@ class SinglyLinkedList {
     let current = this.head;
 
     while (counter !== index) {
-      console.log(counter, current);
       current = current.next;
       counter++;
     }
@@ -71,10 +70,8 @@ class SinglyLinkedList {
     let newTail = current;
 
     while (current.next) {
-      console.log("before", current);
       newTail = current;
       current = current.next;
-      console.log("after", current);
     }
 
     this.tail = newTail;
