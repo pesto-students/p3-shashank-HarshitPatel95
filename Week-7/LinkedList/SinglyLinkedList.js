@@ -17,6 +17,10 @@ class SinglyLinkedList {
     return this.size === 0;
   }
 
+  get getSize() {
+    return this.size;
+  }
+
   getNode(index) {
     if (!Number.isInteger(index)) throw "Invalid index";
     if (index >= this.size) throw "Index too high";
@@ -81,7 +85,36 @@ class SinglyLinkedList {
       this.head = null;
       this.tail = null;
     }
-    return current;
+    return current.value;
+  }
+
+  unshift(value) {
+    if (this.size == this.maxSize) throw "List overflow";
+
+    let newNode = new Node(value);
+    if (this.isEmpty) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      newNode.next = this.head;
+      this.head = newNode;
+    }
+
+    this.size++;
+    return this;
+  }
+
+  shift() {
+    if (this.isEmpty) throw "List Underflow";
+
+    let currentHead = this.head;
+
+    this.head = currentHead.next;
+    this.size--;
+    if (this.isEmpty) {
+      this.tail = null;
+    }
+    return currentHead.value;
   }
 
   reverse() {
