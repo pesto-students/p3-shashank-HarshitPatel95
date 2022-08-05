@@ -19,13 +19,13 @@ function nextGreaterElement(arr, n) {
 }
 
 try {
-  var Input1 = [1, 3, 2, 4];
-  var N1 = Input1.length;
-  console.log(Input1, "=>", nextGreaterElement(Input1, N1));
+  var array = [1, 3, 2, 4];
+  var arraySize = Input1.length;
+  console.log(Input1, "=>", nextGreaterElement(array, arraySize));
 
-  var Input2 = [6, 8, 0, 1, 3];
-  var N2 = Input2.length;
-  console.log(Input2, "=>", nextGreaterElement(Input2, N2));
+  var myArray = [6, 8, 0, 1, 3];
+  var myArraySize = Input2.length;
+  console.log(Input2, "=>", nextGreaterElement(myArray, myArraySize));
 } catch (e) {
   console.warn(e);
 }

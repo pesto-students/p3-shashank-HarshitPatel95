@@ -23,13 +23,12 @@ try {
   console.log("LinkedList with k=2 :");
   list.log();
 
-  // Create a loop for testing
-  const k = 2;
-  if (k == 0) {
+  const loopnode = 2;
+  if (loopnode == 0) {
     console.log("No Loop");
   } else {
     // Create a loop for testing
-    let knode = list.getNode(k - 1);
+    let knode = list.getNode(loopnode - 1);
     let lnode = list.getNode(list.getSize - 1);
     lnode.next = knode;
 
@@ -40,24 +39,24 @@ try {
     }
   }
 
-  let list1 = new SinglyLinkedList();
-  list1.push(1);
-  list1.push(8);
-  list1.push(3);
-  list1.push(4);
+  let mylist = new SinglyLinkedList();
+  mylist.push(1);
+  mylist.push(8);
+  mylist.push(3);
+  mylist.push(4);
   console.log("LinkedList with k=0 :");
-  list1.log();
+  mylist.log();
 
-  const k1 = 0;
-  if (k1 == 0) {
+  const myloopnode = 0;
+  if (myloopnode == 0) {
     console.log("No Loop");
   } else {
     // Create a loop for testing
-    let knode1 = list1.getNode(k1 - 1);
-    let lnode1 = list1.getNode(list1.getSize - 1);
+    let knode1 = mylist.getNode(myloopnode - 1);
+    let lnode1 = mylist.getNode(mylist.getSize - 1);
     lnode1.next = knode1;
 
-    if (detectLoopInList(list1)) {
+    if (detectLoopInList(mylist)) {
       console.log("Loop found");
     } else {
       console.log("No Loop");
