@@ -31,7 +31,37 @@
 .App .todo-div .todo-header h1 {
   color: var(--white-color);
   background: var(--sandy-brown-color);
-  padding: 6px;
+  padding: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.App .todo-div .todo-add-form form {
+  padding: 5px;
+}
+
+.App .todo-div .todo-add-form form input {
+  text-align: left;
+  height: 30px;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--sandy-brown-color);
+  font-size: 20px;
+  font-weight: 500;
+  width: 60%;
+}
+
+.App .todo-div .todo-add-form form button {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  border-color: transparent;
+  background-color: var(--sandy-brown-color);
+  color: var(--white-color);
+  font-size: 15px;
+  margin-left: 10px;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
 }
 
