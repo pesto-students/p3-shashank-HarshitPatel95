@@ -1,3 +1,48 @@
+:root {
+  --crystal-color: #aedad3;
+  --cultured-color: #f4f4f4;
+  --sandy-brown-color: #f09963;
+  --white-color: #ffffff;
+}
+
 .App {
+  width: 100%;
+  height: 100vh;
+  background: var(--crystal-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+}
+
+.App .todo-div {
+  width: 45vw;
+  height: 75vh;
+  background-color: var(--cultured-color);
+  box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+
+.App .todo-div .todo-header {
+  padding: 10px 0px;
+}
+
+.App .todo-div .todo-header h1 {
+  color: var(--white-color);
+  background: var(--sandy-brown-color);
+  padding: 6px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 900px) {
+  .App .todo-div {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .App .todo-div {
+    width: 85vw;
+  }
 }
