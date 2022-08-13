@@ -3,6 +3,9 @@
   --cultured-color: #f4f4f4;
   --sandy-brown-color: #f09963;
   --white-color: #ffffff;
+  --small-font: 10px;
+  --medium-font: 15px;
+  --large-font: 20px;
 }
 
 .App {
@@ -17,6 +20,8 @@
 }
 
 .App .todo-div {
+  display: flex;
+  flex-direction: column;
   width: 45vw;
   height: 75vh;
   background-color: var(--cultured-color);
@@ -35,23 +40,23 @@
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
 }
 
-.App .todo-div .todo-add-form form {
+.App .todo-div .todo-add-form {
   padding: 5px;
 }
 
-.App .todo-div .todo-add-form form input {
+.App .todo-div .todo-add-form input {
   text-align: left;
   height: 30px;
   background: transparent;
   outline: none;
   border: none;
   border-bottom: 2px solid var(--sandy-brown-color);
-  font-size: 20px;
+  font-size: var(--large-font);
   font-weight: 500;
-  width: 60%;
+  width: 70%;
 }
 
-.App .todo-div .todo-add-form form button {
+.App .todo-div .todo-add-form button {
   height: 45px;
   width: 45px;
   border-radius: 50%;
@@ -60,9 +65,28 @@
   border-color: transparent;
   background-color: var(--sandy-brown-color);
   color: var(--white-color);
-  font-size: 15px;
-  margin-left: 10px;
+  font-size: var(--medium-font);
+  margin-left: 25px;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.App .todo-div .todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 70px;
+}
+
+.App .todo-div .todo-list .todo-item {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 500;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: var(--sandy-brown-color);
 }
 
 @media (max-width: 900px) {
