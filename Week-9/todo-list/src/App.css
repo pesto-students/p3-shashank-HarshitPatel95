@@ -44,6 +44,12 @@
   padding: 10px;
 }
 
+.App .todo-div .todo-add-form form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .App .todo-div .todo-add-form input {
   text-align: left;
   height: 30px;
@@ -115,14 +121,40 @@
   text-decoration: line-through;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 975px) {
   .App .todo-div {
     width: 70vw;
+  }
+  .App .todo-div .todo-list {
+    padding: 15px 75px;
+  }
+}
+
+@media (max-width: 600px) {
+  .App .todo-div .todo-list {
+    padding: 15px 50px;
+  }
+}
+
+@media (max-width: 550px) {
+  .App .todo-div {
+    width: 85vw;
+  }
+  .App .todo-div .todo-list {
+    padding: 15px 20px;
   }
 }
 
 @media (max-width: 400px) {
-  .App .todo-div {
-    width: 85vw;
+  .App .todo-div .todo-add-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  .App .todo-div .todo-add-form button {
+    margin-left: 0px;
+    margin-top: 10px;
+    height: 45px;
+    width: 90px;
+    border-radius: 10%;
   }
 }
