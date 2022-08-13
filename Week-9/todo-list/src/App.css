@@ -77,6 +77,10 @@
   cursor: pointer;
 }
 
+.App .todo-div .todo-add-form button:hover {
+  background-color: #20bf6b;
+}
+
 .App .todo-div .todo-list {
   display: flex;
   flex-direction: column;
@@ -106,6 +110,10 @@
   -webkit-appearance: none;
   outline: none;
   cursor: pointer;
+}
+
+.App .todo-div .todo-list .todo-item input[type="checkbox"]:hover {
+  border: 2px solid #20bf6b;
 }
 
 .App .todo-div .todo-list .todo-item input[type="checkbox"]:checked {

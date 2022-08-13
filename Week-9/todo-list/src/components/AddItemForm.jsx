@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useId } from "react";
 
 const AddItemForm = (props) => {
   const [inputItem, setInputItem] = useState("");
+  const uuid = useId();
 
   const submitHandler = (event) => {
     event.preventDefault();
-    if (inputItem !== "") {
+    if (inputItem) {
       const toDoItem = {
-        id: props.data.length + 1,
+        id: uuid,
         title: inputItem,
-        done: false,
       };
       props.onAddItem(toDoItem);
       setInputItem("");
@@ -21,11 +21,9 @@ const AddItemForm = (props) => {
       <form onSubmit={submitHandler}>
         <input
           type="text"
-          placeholder="Add Items"
+          placeholder="Add Item"
           value={inputItem}
-          onChange={(event) => {
-            setInputItem(event.target.value);
-          }}
+          onChange={(event) => setInputItem(event.target.value)}
         />
         <button type="submit">ADD</button>
       </form>

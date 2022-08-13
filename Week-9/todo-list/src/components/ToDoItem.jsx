@@ -1,19 +1,19 @@
-import React from "react";
+import React, { useState, useId } from "react";
 
 const ToDoItem = (props) => {
-  const handleOnDone = (event) => {
-    props.onDoneItem(event.target.checked, parseInt(event.target.id));
-  };
+  const [checked, setChecked] = useState(false);
+  const uuid = useId();
+
+  const handleChange = () => setChecked(!checked);
 
   return (
-    <div className="todo-item">
+    <div className="todo-item" id={uuid}>
       <input
         type="checkbox"
-        checked={props.item.done === true ? "checked" : ""}
-        onChange={handleOnDone}
-        id={props.item.id}
+        checked={checked === true ? "checked" : ""}
+        onChange={handleChange}
       />
-      <p className={`${props.item.done === true ? "item-title-check" : ""}`}>
+      <p className={`${checked === true ? "item-title-check" : ""}`}>
         {props.item.title}
       </p>
     </div>
