@@ -37,11 +37,11 @@
   color: var(--white-color);
   background: var(--sandy-brown-color);
   padding: 5px;
-  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.4);
 }
 
 .App .todo-div .todo-add-form {
-  padding: 5px;
+  padding: 10px;
 }
 
 .App .todo-div .todo-add-form input {
@@ -53,7 +53,7 @@
   border-bottom: 2px solid var(--sandy-brown-color);
   font-size: var(--large-font);
   font-weight: 500;
-  width: 70%;
+  width: auto;
 }
 
 .App .todo-div .todo-add-form button {
@@ -75,7 +75,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 10px 70px;
+  padding: 15px 100px;
+  overflow-y: auto;
 }
 
 .App .todo-div .todo-list .todo-item {
@@ -84,9 +85,34 @@
   font-weight: 500;
   height: 40px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-direction: row;
   color: var(--sandy-brown-color);
+  align-items: center;
+}
+
+.App .todo-div .todo-list .todo-item input[type="checkbox"] {
+  width: 1.3em;
+  height: 1.3em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 2px solid var(--sandy-brown-color);
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.App .todo-div .todo-list .todo-item input[type="checkbox"]:checked {
+  background-color: var(--sandy-brown-color);
+  border: 2px solid var(--white-color);
+}
+
+.App .todo-div .todo-list .todo-item p {
+  margin-left: 15px;
+}
+
+.App .todo-div .todo-list .todo-item .item-title-check {
+  text-decoration: line-through;
 }
 
 @media (max-width: 900px) {
