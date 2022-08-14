@@ -3,6 +3,7 @@
   --cultured-color: #f4f4f4;
   --sandy-brown-color: #f09963;
   --white-color: #ffffff;
+  --crayola-color: #20bf6b;
   --small-font: 10px;
   --medium-font: 15px;
   --large-font: 20px;
@@ -78,7 +79,7 @@
 }
 
 .App .todo-div .todo-add-form button:hover {
-  background-color: #20bf6b;
+  background-color: var(--crayola-color);
 }
 
 .App .todo-div .todo-list {
@@ -113,7 +114,7 @@
 }
 
 .App .todo-div .todo-list .todo-item input[type="checkbox"]:hover {
-  border: 2px solid #20bf6b;
+  border: 2px solid var(--crayola-color);
 }
 
 .App .todo-div .todo-list .todo-item input[type="checkbox"]:checked {
