@@ -1,14 +1,12 @@
-import React, { useState, useId } from "react";
+import React, { useState } from "react";
 
 const AddItemForm = (props) => {
   const [inputItem, setInputItem] = useState("");
-  const uuid = useId();
 
   const submitHandler = (event) => {
     event.preventDefault();
     if (inputItem) {
       const toDoItem = {
-        id: uuid,
         title: inputItem,
       };
       props.onAddItem(toDoItem);

@@ -8,14 +8,8 @@ const ToDoItem = (props) => {
 
   return (
     <div className="todo-item" id={uuid}>
-      <input
-        type="checkbox"
-        checked={checked === true ? "checked" : ""}
-        onChange={handleChange}
-      />
-      <p className={`${checked === true ? "item-title-check" : ""}`}>
-        {props.item.title}
-      </p>
+      <input type="checkbox" checked={checked ? "checked" : ""} onChange={handleChange} />
+      <p className={`${checked ? "item-title-check" : ""}`}>{props.item.title}</p>
     </div>
   );
 };
