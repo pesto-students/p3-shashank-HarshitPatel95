@@ -1,0 +1,169 @@
+:root {
+  --crystal-color: #aedad3;
+  --cultured-color: #f4f4f4;
+  --sandy-brown-color: #f09963;
+  --white-color: #ffffff;
+  --crayola-color: #20bf6b;
+  --small-font: 10px;
+  --medium-font: 15px;
+  --large-font: 20px;
+}
+
+.App {
+  width: 100%;
+  height: 100vh;
+  background: var(--crystal-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.App .todo-div {
+  display: flex;
+  flex-direction: column;
+  width: 45vw;
+  height: 75vh;
+  background-color: var(--cultured-color);
+  box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+
+.App .todo-div .todo-header {
+  padding: 10px 0px;
+}
+
+.App .todo-div .todo-header h1 {
+  color: var(--white-color);
+  background: var(--sandy-brown-color);
+  padding: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.4);
+}
+
+.App .todo-div .todo-add-form {
+  padding: 10px;
+}
+
+.App .todo-div .todo-add-form form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.App .todo-div .todo-add-form input {
+  text-align: left;
+  height: 30px;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--sandy-brown-color);
+  font-size: var(--large-font);
+  font-weight: 500;
+  width: auto;
+}
+
+.App .todo-div .todo-add-form button {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  border-color: transparent;
+  background-color: var(--sandy-brown-color);
+  color: var(--white-color);
+  font-size: var(--medium-font);
+  margin-left: 25px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.App .todo-div .todo-add-form button:hover {
+  background-color: var(--crayola-color);
+}
+
+.App .todo-div .todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px 100px;
+  overflow-y: auto;
+}
+
+.App .todo-div .todo-list .todo-item {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 500;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  color: var(--sandy-brown-color);
+  align-items: center;
+}
+
+.App .todo-div .todo-list .todo-item input[type="checkbox"] {
+  width: 1.3em;
+  height: 1.3em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 2px solid var(--sandy-brown-color);
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.App .todo-div .todo-list .todo-item input[type="checkbox"]:hover {
+  border: 2px solid var(--crayola-color);
+}
+
+.App .todo-div .todo-list .todo-item input[type="checkbox"]:checked {
+  background-color: var(--sandy-brown-color);
+  border: 2px solid var(--white-color);
+}
+
+.App .todo-div .todo-list .todo-item p {
+  margin-left: 15px;
+}
+
+.App .todo-div .todo-list .todo-item .item-title-check {
+  text-decoration: line-through;
+}
+
+@media (max-width: 975px) {
+  .App .todo-div {
+    width: 70vw;
+  }
+  .App .todo-div .todo-list {
+    padding: 15px 75px;
+  }
+}
+
+@media (max-width: 600px) {
+  .App .todo-div .todo-list {
+    padding: 15px 50px;
+  }
+}
+
+@media (max-width: 550px) {
+  .App .todo-div {
+    width: 85vw;
+  }
+  .App .todo-div .todo-list {
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .App .todo-div .todo-add-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  .App .todo-div .todo-add-form button {
+    margin-left: 0px;
+    margin-top: 10px;
+    height: 45px;
+    width: 90px;
+    border-radius: 10%;
+  }
+}
