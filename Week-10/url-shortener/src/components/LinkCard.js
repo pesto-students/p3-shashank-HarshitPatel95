@@ -1,14 +1,15 @@
+import React, { useContext } from "react";
 import ShortedLinkCard from "./ShortedLinkCard";
+import { UserContext } from "../pages/Home";
 
 const LinkCard = () => {
-  let longURL =
-    "https://www.google.com/search?q=shortly.com&amp;oq=sho&amp;aqs=chrome.1.69i57j69i59l2j69i61l3j69i65l2.2163j0j1&amp;sourceid=chrome&amp;ie=UTF-8";
-  let shortURL = "https://bit.ly/3R0Z4to";
+  const { shortedLink } = useContext(UserContext);
 
   return (
     <div className="linklist-container">
-      <ShortedLinkCard longurl={longURL} shorturl={shortURL} />
-      <ShortedLinkCard longurl={longURL} shorturl={shortURL} />
+      {shortedLink.map((link, index) => (
+        <ShortedLinkCard key={index} longurl={link.longURL} shorturl={link.shortURL} />
+      ))}
     </div>
   );
 };
