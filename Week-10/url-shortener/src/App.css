@@ -4,9 +4,9 @@
   --white-color: #ffffff;
   --palatinate-blue-color: #3d3dd7;
   --alice-blue-color: #f0f8ff;
-  --small-font: 10px;
-  --medium-font: 15px;
+  --extra-large-font: 30px;
   --large-font: 22px;
+  --medium-font: 15px;
 }
 
 .App {
@@ -62,4 +62,95 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.App .page-content .form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.App .page-content .form-container form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  width: 400px;
+  padding: 20px;
+  background-color: var(--white-color);
+  border-radius: 10px;
+}
+
+.App .page-content .form-container label {
+  margin: 10px 0px 0px 0px;
+  font-size: var(--medium-font);
+}
+
+.App .page-content .form-container input,
+.App .page-content .form-container textarea {
+  margin: 10px 0px;
+  width: 95%;
+}
+
+.App .page-content .form-container input {
+  height: 30px;
+}
+
+.App .page-content .form-container .btnsubmit {
+  margin: 10px 0px;
+  width: 40%;
+  height: 35px;
+  background-color: var(--palatinate-blue-color);
+  color: var(--white-color);
+  border: none;
+  cursor: pointer;
+}
+
+.App .page-content .card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.App .page-content .card-container .cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  padding: 20px;
+}
+
+.App .page-content .card-container .cards .card {
+  padding: 25px;
+  background-color: var(--white-color);
+  border-radius: 10px;
+  width: 30%;
+  cursor: pointer;
+}
+
+.App .page-content .card-container .cards .card i {
+  font-size: var(--extra-large-font);
+}
+
+.App .page-content .card-container .cards .card p {
+  padding: 5px;
+  margin: 5px;
+}
+
+@media (max-width: 450px) {
+  .App .page-content .card-container .cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .App .page-content .card-container .cards .card {
+    margin-top: 10px;
+    width: 80%;
+  }
+
+  .App .page-content .form-container form {
+    width: 80%;
+  }
 }

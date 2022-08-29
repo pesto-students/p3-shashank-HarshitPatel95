@@ -1,11 +1,19 @@
 import "./App.css";
-import { Link, Routes, Route } from "react-router-dom";
+import { Link, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import React, { useState } from "react";
 
 function App() {
-  const [activeTab, setActiveTab] = useState("home");
+  const location = useLocation();
+  let currentPage = "";
+  if (location.pathname === "/Contact") {
+    currentPage = "contact";
+  } else {
+    currentPage = "home";
+  }
+  const [activeTab, setActiveTab] = useState(currentPage);
+
   return (
     <div className="App">
       <nav className="navbar">
