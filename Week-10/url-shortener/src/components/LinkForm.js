@@ -8,9 +8,7 @@ const LinkForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("******");
     if (enteredUrl === "") {
-      alert("This is not a valid URL");
       setEnteredUrl("");
       linkRef.current.focus();
       return;
