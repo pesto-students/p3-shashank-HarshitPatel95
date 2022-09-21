@@ -19,11 +19,7 @@ function App() {
       <nav className="navbar">
         <span className={`navtabcontainer ${activeTab === "home" ? "active-tab" : ""}`}>
           <i className="las la-home"></i>
-          <Link
-            className={`${activeTab === "home" ? "active-tab" : ""}`}
-            to="/"
-            onClick={() => setActiveTab("home")}
-          >
+          <Link className={`${activeTab === "home" ? "active-tab" : ""}`} to="/" onClick={() => setActiveTab("home")}>
             Home
           </Link>
         </span>
