@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Provider, connect } from "react-redux";
+import store from "./store";
 import "./index.css";
 
-const Room = () => {
-  const [isLightOn, setIsLightOn] = useState(true);
-
+const Room = ({ isLightOn, dispatch }) => {
   const flipLight = () => {
-    setIsLightOn(!isLightOn);
+    dispatch({ type: "SWITCH" });
   };
 
   const lightedness = isLightOn ? "lit" : "dark";
@@ -19,4 +19,14 @@ const Room = () => {
   );
 };
 
-ReactDOM.render(<Room />, document.getElementById("root"));
+const mapStateToProps = (state) => ({
+  isLightOn: state.isLightOn,
+});
+const ConnectedRoom = connect(mapStateToProps)(Room);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <Provider store={store}>
+    <ConnectedRoom />
+  </Provider>
+);
