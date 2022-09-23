@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
-import store from "./store";
-import StepCounter from "./stepcounter";
+import { store } from "./redux/store";
+import StepCounter from "./components/StepCounter";
 import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

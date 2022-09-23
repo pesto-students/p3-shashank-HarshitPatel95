@@ -1,14 +1,15 @@
 import { Button, Grid } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
+import { actions } from "../redux/actions";
 
 const StepCounter = () => {
   const count = useSelector((store) => store.count);
   const dispatch = useDispatch();
   const increment = () => {
-    dispatch({ type: "INC_STEP" });
+    dispatch({ type: actions.INC_STEP });
   };
   const reset = () => {
-    dispatch({ type: "RESET_STEP" });
+    dispatch({ type: actions.RESET_STEP });
   };
 
   return (
@@ -26,7 +27,11 @@ const StepCounter = () => {
           </Button>
         </Grid>
         <Grid item>
-          <Button variant="outlined" onClick={reset} sx={{ borderRadius: 0, width: 300, height: 50, color: "black" }}>
+          <Button
+            variant="outlined"
+            onClick={reset}
+            sx={{ borderRadius: 0, width: 300, height: 50, color: "black" }}
+          >
             Reset Steps
           </Button>
         </Grid>
