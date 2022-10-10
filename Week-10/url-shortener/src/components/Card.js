@@ -1,8 +1,8 @@
-const Card = (props) => {
+const Card = ({ icon, title }) => {
   return (
     <div className="card">
-      <i className={props.icon}></i>
-      <p>{props.title}</p>
+      <i className={icon}></i>
+      <p>{title}</p>
     </div>
   );
 };
